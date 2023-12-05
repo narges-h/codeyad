@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #eff1f5;
+    }
+    .header{
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        background-color: #286bb8e6;
+        box-shadow: 0px 0px 5px 0px black;
+        color: #fff;
+        display: flex;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 9%;
+        padding-left: 38%; 
+    }
+    .head{
+        display: flex;
+        direction: rtl;
+       
+    }
+    #logo{
+        padding: 6% 5% 1% 0%;
+
+
+    }
+
+    ul {
+        display: flex;
+        
+    }
+    .hover {
+        white-space: nowrap; /* yek khat neshan dadan */
+        display: flex;
+        cursor: pointer;
+        list-style: none; /* pak kakrdane noghte */
+        align-items: center;
+        padding: 0 0 0 9%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: large;
+        padding-top: 14%;
+        font-weight: bold;
+    }
+    .hover:hover ul {
+        display: block;
+    }
+    .hover ul {
+        display: none;
+    }
+    .topnav {
+        display: flex;
+        align-items: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .hover:hover li {
+        color: #286bb8e6;
+    }
+    .longuage:hover li {
+        color: #286bb8e6;
+    }
+    .search{
+        position: relative;
+        box-sizing: border-box;
+        margin: 6% 23% 0% 3%;
+        border: 0 solid #e5e7eb;
+        /* border: 1% solid rgb(red, green, blue) !important; */
+    }
+    .search-input{
+        border-radius: 10px;
+        height: 53%;
+        padding-left: 30%;
+        background: #fff;
+        background-image: url('search.jpg');
+        background-repeat: no-repeat;
+        background-size: 15%;
+        
+        background-position: left;
+        /* font-weight: 400; */
+        /* border-color: #fff; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 87%;
+        
+        
+    }
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+    }
+    #sub{
+        background-color: #2564ace6;
+        margin: 57% 46% 0% 0%;
+        border-radius: 10px;
+        width: 114%;
+        height: 28%;
+        color: white;
+        font-size: larger;
+        border-color: #2564ace6;
+        cursor: pointer;
+    }
+    #sub:hover {
+    background-color: #184981e6;
+    }
+    .top-main{
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-right: 5px;
+        padding-bottom: 12px;
+        
+    }
+    .longuage{
+        white-space: nowrap; /* yek khat neshan dadan */
+        display: flex;
+        cursor: pointer;
+        list-style: none; /* pak kakrdane noghte */
+        align-items: center;
+        padding: 0 0 0 9%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+        padding-top: 50px;
+    }
+
+
+
+</style>
+<body>
+    <header>
+        <div class="header">
+            "کدنویسی،هنری برای خلق دنیای بهتر"
+        </div>
+    </header>
+    <div class="head">
+
+        <div id="logo"> 
+            <img src="logo.png" alt="logo" style=" width:70%; height:68%">  
+        </div>
+        <div class="topnav">
+            <ul>
+              <div class="hover">
+                <li>دوره ها</li>
+              </div>
+              <div class="hover">
+                <li>بلاگ</li>
+              </div>
+              <div class="hover">
+                <li>درباره ما</li>
+              </div>
+              <div class="hover">
+                <li>مدرسین</li>
+              </div>
+              <div class="hover">
+                <li>بوتکمپ ها</li>
+              </div>
+              <div class="hover">
+                <li>پرسش و پاسخ</li>
+              </div>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" class="search-input"  placeholder="  هرچی میخوای جست و جو کن" >
+        </div>
+        <div class="login">
+            <button id="sub" onclick="login();">ورود یا ثبت نام</button>
+        </div>
+
+    </div>
+
+    <hr color="#e1eaec">
+
+    <div class="top-main">
+        <ul>
+            <div class="longuage">
+              <li>دوره ها</li>
+            </div>
+            <div class="longuage">
+              <li>بلاگ</li>
+            </div>
+            <div class="longuage">
+              <li>درباره ما</li>
+            </div>
+            <div class="longuage">
+              <li>مدرسین</li>
+            </div>
+            <div class="longuage">
+              <li>بوتکمپ ها</li>
+            </div>
+            <div class="longuage">
+              <li>پرسش و پاسخ</li>
+            </div>
+
+          </ul>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function plus(){
+            document.getElementById("result").innerHTML = num1+num2;
+        }
+
+    </script>
+      
+</body>
+</html>
