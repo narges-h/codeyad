@@ -22,12 +22,28 @@ body{
 #form-sign{
     display: flex;
     flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 #titrpp{
-    color:rgb(16, 76, 215);
-    font-size: normal;
+    color:#286bb8;
 }
-
+#titr{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+#emailuser{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+#phoneNumbers{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
 #email ,#phone ,#password ,#password-forget{
     margin-top: 30px;
 }
@@ -90,6 +106,9 @@ body{
     padding: 10px;
     text-align: center;
     margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 #sabtnam:hover{
     cursor: pointer;
@@ -105,6 +124,9 @@ body{
     color: black;
 
     border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 #google:hover{
     cursor: pointer;
@@ -118,9 +140,10 @@ body{
     text-align: center;
 }
 img{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 24px;
     text-align: center;
-    padding-right: 10px;
+    padding-right: 13px;
+    margin-bottom: -6px;
 
 }

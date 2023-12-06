@@ -2,7 +2,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: rgba(199, 198, 198, 0.556);
-    
+
 }
 
 #forget:hover{
@@ -23,13 +23,32 @@ body{
  
     
 }
+#labelEmail{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 25px;
+    
+}
+#labelpass{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 25px;
+    
+}
+#titr{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
 #form-login{
     display: flex;
     flex-direction: column;
 }
 #titrpp{
-    color:rgb(16, 76, 215);
-    font-size: normal;
+    color:#2564ace6;
+
 }
 #emailuser{
     border: 1px solid rgb(232, 240, 254) ;
@@ -37,9 +56,9 @@ body{
     background-color: rgb(232, 240, 254);
     padding: 15px;
     width: 470px;
-   
-    
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 #pass{
     border: 1px solid rgb(232, 240, 254);
@@ -54,10 +73,13 @@ body{
   margin-top: 20px;
 }
 #forget{
-    color:rgb(16, 76, 215);
+    color:#286bb8e6;
     padding-top: 20px;
     padding-bottom: 20px;
     text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
     
 }
 #pass:hover{
@@ -80,10 +102,13 @@ body{
     height: 55px;
     padding: 10px;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: bold;
 }
 #open:hover{
     cursor: pointer;
-    background-color: rgb(25, 60, 142);
+    background-color: #184981e6;
 }
 
 #google{
@@ -95,22 +120,31 @@ body{
     color: black;
 
     border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 #google:hover{
     cursor: pointer;
     opacity: 0.7;
 }
 #sabtnam{
-    color: rgb(16, 76, 215);
+    color: #286bb8;
     text-decoration: none;
+    padding-left: 18px;
+    padding-right: 10px;
 }
 #sabt{
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
 }
 img{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 24px;
     text-align: center;
-    padding-right: 10px;
+    padding-right: 13px;
+    margin-bottom: -6px;
 
 }
