@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body, header {
+            margin: 0;
+        }
+        
+        body {
+            background-color: #eff1f5;
+        }
+        
+        .header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            background-color: #286bb8e6;
+            box-shadow: 0px 0px 5px 0px black;
+            color: #fff;
+            width: 100%;
+            height: 9vh;
+            left: 0;
+            top: 0;
+            justify-content: center;
+        }
+        
+        #content {
+            display: flex;
+            width: 60vw;
+            direction: rtl;
+        }
+        
+        #buttons {
+            display: flex;
+            width: 40vw;
+            justify-content: center;
+        }
+        
+        .head {
+            display: flex;
+            direction: rtl;
+            padding: 1%;
+            justify-content: space-evenly;
+        }
+        
+        #logo {
+            display: inline-block;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: auto;
+        }
+        
+        ul {
+            display: flex;
+        }
+        
+        .navs {
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        .hover {
+            display: inline-block;
+            width: auto;
+            white-space: nowrap;
+            display: flex;
+            cursor: pointer;
+            list-style: none;
+            align-items: center;
+            font-family: 'B Nazanin', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+        }
+        
+        .hover:hover ul {
+            display: block;
+        }
+        
+        .hover ul {
+            display: none;
+        }
+        
+        .topnav {
+            display: flex;
+            align-items: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        
+        .hover:hover li {
+            color: #286bb8e6;
+        }
+        
+        .longuage:hover li {
+            color: #286bb8e6;
+        }
+        
+        .search {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 1vh;
+            border-width: 0;
+            margin: 2%;
+        }
+        
+        #imgSearch {
+            width: 10%;
+            height: auto;
+        }
+        
+        .search-input {
+            height: 70%;
+            background: #fff;
+            padding-right: 3%;
+            padding-left: 3%;
+            width: 80%;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            outline: none!important;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: medium;
+        }
+        
+        .login {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #sub {
+            white-space: nowrap;
+            background-color: #2564ace6;
+            border-radius: 10px;
+            width: 100%;
+            height: 70%;
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            border-color: #2564ace6;
+            cursor: pointer;
+            border: none;
+        }
+        
+        #sub:hover {
+            background-color: #184981e6;
+        }
+        
+        .top-main {
+            display: flex;
+            align-items: center;
+            padding-top: 25px;
+            padding-right: 5px;
+            padding-bottom: 12px;
+        }
+        
+        .longuage {
+            white-space: nowrap;
+            display: flex;
+            cursor: pointer;
+            list-style: none;
+            align-items: center;
+            padding: 0 0 0 9%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            "کدنویسی،هنری برای خلق دنیای بهتر"
+        </div>
+    </header>
+    <div class="head">
+        <div id="content">
+            <div id="logo"> 
+                <img src="logo.png" alt="logo" style=" width:90%; height:68%">  
+            </div>
+    
+            <div class="topnav">
+            </div>
+            <ul class="navs">
+                <div class="hover">
+                    <li>دوره ها</li>
+                </div>
+                <div class="hover">
+                    <li>بلاگ</li>
+                </div>
+                <div class="hover">
+                    <li>درباره ما</li>
+                </div>
+                <div class="hover">
+                    <li>مدرسین</li>
+                </div>
+                <div class="hover">
+                    <li>بوتکمپ ها</li>
+                </div>
+                <div class="hover">
+                    <li>پرسش و پاسخ</li>
+                </div>
+            </ul>
+        </div>
+        <div id="buttons">
+            <div class="search">
+                <input type="text" class="search-input" placeholder="هرچی میخوای جست و جو کن">
+                <img id="imgSearch" src="search.jpg"/>
+            </div>
+            <div class="login">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ورود یا ثبت نام</button>
+            </div>
+        </div>
+    </div>
+
+    <hr color="#e1eaec">
+
+
+    <div class="container">   
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">ورود به حساب کاربری</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-login" method="get">
+                            <label for="email">شماره تلفن یا ایمیل</label><br>
+                            <input type="email" id="email" placeholder="شماره تلفن یا ایمیل خود را وارد کنید">
+                            <br>
+                            <label for="password">رمز عبور</label><br>
+                            <input type="password" id="password" placeholder="******">
+                            <br>
+                            <a href="#">کلمه عبور خود را فراموش کرده اید؟</a>
+                            <br>
+                            <button type="submit" class="btn btn-primary">ورود</button>
+                            <button type="button" class="btn btn-primary">ورود با گوگل</button>
+                            <p>حساب کاربری ندارید؟ <a href="signup.html">ثبت نام</a></p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <div class="top-main">
+        <ul>
+            <div class="longuage">
+                <li>دوره ها</li>
+            </div>
+            <div class="longuage">
+                <li>بلاگ</li>
+            </div>
+            <div class="longuage">
+                <li>درباره ما</li>
+            </div>
+            <div class="longuage">
+                <li>مدرسین</li>
+            </div>
+            <div class="longuage">
+                <li>بوتکمپ ها</li>
+            </div>
+            <div class="longuage">
+                <li>پرسش و پاسخ</li>
+            </div>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

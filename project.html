@@ -7,48 +7,70 @@
     <title>Document</title>
 </head>
 <style>
+    body , header{
+        margin: 0;
+    }
     body{
         background-color: #eff1f5;
     }
     .header{
+        display: flex;
+        position: relative;
         align-items: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 22px;
+        font-size: larger;
         background-color: #286bb8e6;
         box-shadow: 0px 0px 5px 0px black;
         color: #fff;
-        display: flex;
-        left: 0;
-        position: fixed;
-        top: 0;
         width: 100%;
-        height: 9%;
-        padding-left: 38%; 
-        position: fixed;
-  
+        height: 9vh;
+        left: 0;
+        top: 0;
+        justify-content: center;
+    }
+    #content{
+        display: flex;
+        width: 60vw;
+        direction: rtl;
+    }
+    #buttons{
+        display: flex;
+        width: 40vw;
+        justify-content: center;
+        
     }
     .head{
         display: flex;
         direction: rtl;
+        padding: 1%;
+        justify-content: space-evenly;
     }
     #logo{
-        padding: 6% 5% 1% 0%;
+        display: inline-block;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: auto;
+
     }
-    ul {
-        display: flex;     
+
+    ul {    
+        display: flex;
+    }
+    .navs{
+        width: 100%;
+        justify-content: space-between;
     }
     .hover {
+        display: inline-block;
+        width: auto;
         white-space: nowrap; /* yek khat neshan dadan */
         display: flex;
         cursor: pointer;
         list-style: none; /* pak kakrdane noghte */
         align-items: center;
-        padding: 0 0 0 9%;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: large;
+        font-family: 'B Nazanin' ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
         font-weight: bold;
-        padding-top: 14%;
-       
     }
     .hover:hover ul {
         display: block;
@@ -69,46 +91,56 @@
         color: #286bb8e6;
     }
     .search{
-        position: relative;
-        box-sizing: border-box;
-        margin: 6% 23% 0% 3%;
-        border: none;
-        /* border: 1% solid rgb(red, green, blue) !important; */
+        width: 50% ;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background: white;
+
+        border-radius: 1vh;
+        border-width: 0;
+        margin: 2%;
+    }
+    #imgSearch{
+        width: 10%;
+        height: auto;
     }
     .search-input{
-        border-radius: 10px;
-        height: 59%;
-        padding-left: 30%;
+        height: 70%;
         background: #fff;
-        background-image: url('search.jpg');
-        background-repeat: no-repeat;
-        background-size: 15%;
-        background-position: left;
-        /* font-weight: 400; */
-        /* border-color: #fff; */
+   
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 80%;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;      
+        outline: none!important;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-size: 87%;
-        border: none;
+        font-size: medium;
+        
     }
     .login{
+        width: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;  
+        flex-direction: column;
     }
     #sub{
+        white-space: nowrap;
         background-color: #2564ace6;
-        margin: 59% 46% 0% 0%;
         border-radius: 10px;
-        width: 114%;
-        height: 28%;
+        width: 100%;
+        height: 70%;
         color: white;
-        font-size: larger;
+        font-size: medium;
+        font-weight: bold;
         border-color: #2564ace6;
         cursor: pointer;
-        border:none;
+        border: none;
     }
     #sub:hover {
     background-color: #184981e6;
@@ -116,11 +148,11 @@
     .top-main{
         display: flex;
         align-items: center;
-        padding-top: 15%;
+        padding-top: 25px;
         padding-right: 5px;
         padding-bottom: 12px;
-        
     }
+
     .longuage{
         white-space: nowrap; /* yek khat neshan dadan */
         display: flex;
@@ -143,12 +175,14 @@
         </div>
     </header>
     <div class="head">
-
-        <div id="logo"> 
-            <img src="logo.png" alt="logo" style=" width:70%; height:68%">  
-        </div>
+        <div id="content">
+            <div id="logo"> 
+                <img src="logo.png" alt="logo" style=" width:90%; height:68%">  
+            </div>
+    
         <div class="topnav">
-            <ul>
+        </div>
+            <ul class="navs">
               <div class="hover">
                 <li>دوره ها</li>
               </div>
@@ -169,12 +203,16 @@
               </div>
             </ul>
         </div>
-        <div class="search">
-            <input type="text" class="search-input"  placeholder="  هرچی میخوای جست و جو کن" >
+        <div id="buttons">
+            <div class="search">
+                <input type="text" class="search-input"  placeholder="هرچی میخوای جست و جو کن" >
+                <img id="imgSearch" src="search.jpg"/>
+            </div>
+            <div class="login">
+                <button id="sub" onclick="login();">ورود یا ثبت نام</button>
+            </div>
         </div>
-        <div class="login">
-            <button id="sub" onclick="login();" >ورود یا ثبت نام </button>
-        </div>
+
     </div>
 
     <hr color="#e1eaec">
@@ -199,14 +237,16 @@
             <div class="longuage">
               <li>پرسش و پاسخ</li>
             </div>
+
           </ul>
     </div>
+
 
     <script type="text/javascript">
         function login() {
             window.location.href = "login.html";
         }
-      </script>
+    </script>
       
 </body>
 </html>
