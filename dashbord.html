@@ -15,6 +15,7 @@
     }
     .header{
         display: flex;
+        position: fixed;
         background-color: #286bb8e6;
         box-shadow: 0px 0px 5px 0px black;
         color: #fff;
@@ -22,6 +23,7 @@
         height: 9vh;
         left: 0;
         top: 0;
+        z-index: 100;
         position: relative;
         justify-content: space-between;
         align-items: center
@@ -76,7 +78,7 @@
         list-style: none; /* pak kakrdane noghte */
         align-items: center;
         font-family: 'B Nazanin' ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: medium;
+        font-size: larger;
         font-weight: bold;
     }
     .hover:hover ul {
@@ -98,7 +100,7 @@
         color: #286bb8e6;
     }
     .search{
-        width: 50% ;
+        width: 45% ;
         display:flex;
         justify-content:center;
         align-items:center;
@@ -106,7 +108,7 @@
 
         border-radius: 1vh;
         border-width: 0;
-        margin: 2%;
+        margin: 4%;
     }
     #imgSearch{
         width: 10%;
@@ -141,7 +143,7 @@
         background-color: #2564ace6;
         border-radius: 10px;
         width: 100%;
-        height: 70%;
+        height: 55%;
         color: white;
         font-size: medium;
         font-weight: bold;
@@ -155,7 +157,7 @@
     .top-main{
         display: flex;
         align-items: center;
-        padding-top: 25px;
+        padding-top: 100%;
         padding-right: 5px;
         padding-bottom: 12px;
     }
@@ -178,9 +180,9 @@
         }
     }
     #aside{
-        background-color: aqua;
-        width: 200px;
-        height: 500px;
+        background-color: white;
+        width: 250px;
+        height: 800px;
         transition: width 1s;
         box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.2);
         cursor: pointer;
@@ -189,7 +191,23 @@
         z-index: 999;
         display: none;
     }
+    #dashbord{
+        list-style: none;
+        direction: rtl;
+    }
+    li {
+      padding: 15px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .dash:hover li {
+        color: #286bb8e6;
+    }
+    .dash{
+        display: flex;
+    }
 
+        
 
 
 </style>
@@ -206,6 +224,30 @@
        
     </header>
     <aside id="aside">
+        <div id="dashbord">
+                <div class="dash">
+                  <li>اطلاعات کاربری</li>
+                </div>
+                <div class="dash">
+                  <li>آموزش های من</li>
+                </div>
+                <div class="dash">
+                  <li>ثبت نظر</li>
+                </div>
+                <div class="dash" >
+                  <img src="alaghemandi.png" alt="logo" style=" width:10%; height:10%">  
+                  <li>علاقه مندی ها و پیشنهادها</li>
+                </div>
+                <div class="dash">
+                  <li>تاریخچه سفارش ها</li>
+                </div>
+                <div class="dash">
+                  <li>درخواست پشتیبانی</li>
+                </div>
+                <div class="dash">
+                    <li>خروج از حساب کاربری</li>
+                </div>
+        </div>
     </aside>
     <div class="head">
         <div id="content">
