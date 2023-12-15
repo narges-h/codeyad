@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="./sign.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./signup.css">
 </head>
+
 <body dir="rtl" >
     <div class="main">
-    <form id="form-sign" method="get">
+    <form id="form-register" method="post">
+
         <div id="titr">
-            <h1 id="titrpp">ساخت حساب کاربری</h1>
+            <h1 id="titrpp"> ساخت حساب کاربری</h1>
         </div>
+
+
+        <div id="fullnames">
+            <label for="fullname">نام کاربری</label><br>
+            <input type="text" id="fullname" name="fullname" pattern="[A-Za-z\s]+" required >
+        </div>
+        
+        
+        <div id="nationalCodes">
+            <label for="nationalCode">کد ملی</label><br>
+            <input type="text" id="nationalCode" name="nationalCode" pattern="[0-9]{10}" required placeholder="**********">
+        </div>
+
+
+        
+        
+
 
         <div id="email">
-            <label id="labelEmail" for="emaill">ایمیل</label><br>
-            <input type="email" id="emailuser" placeholder="name@example.com" >
-
-        </div>
+            <label for="emaill">ایمیل</label><br>  
+            <input type="email" id="emailuser"  placeholder="ایمیل خود را وارد کنید">
+            </div>
         
-        <div id="phone">
-            <label id="labelphon" for="emaill">شماره تلفن</label><br>
-            <input type="tel" id="phoneNumbers" placeholder="09351110015">
 
-        </div>
-        
         <div id="password">
-            <label id="labelpass" for="passwordd">رمز عبور</label>
+            <label for="passwordd">رمز عبور</label>
             <input type="password" id="pass" placeholder="******">
         </div>
+
         <div id="password-forget">
-            <label id="labelpass2" for="password-reapet">تکرار رمز عبور</label>
+            <label for="password-reapet">تکرار رمز عبور</label>
             <input type="password" id="pass" placeholder="******">
         </div>
 
+
+        <select id="educationLevel" name="educationLevel">
+            <option value="highschool">دیپلم</option>
+            <option value="lisans">لیسانس</option>
+            <option value="foghlisans">فوق لیسانس</option>
+            <option value="doctor">دکترا</option>
+        </select>
+
+
+        <div id="Gender">
+            جنسیت:
+            <input type="radio" id="maleGender" name="gender" value="Male">
+            <label for="maleGender">Male</label>
+            <input type="radio" id="fameleGender" name="gender" value="Famele">
+            <label for="fameleGender">Famele</label>
+        </div>
+
+
+        <div id="rememberMes">
+        مرا به خاطر بسپار:
+        <input type="checkbox" id="rememberMe" name="rememberMe" value="remembered">
+        </div>
         <button name="button" id="sabtnam">ثبت نام</button>
+        
 
-        <button name="button2" id="google"><a>ورود با گوگل</a><img  src="p1.png" alt="google logo"></button>
         <p id="sabt"&nbsp >قبلا ثبت نام کرده اید؟<a href="login.html" id="vorodhesab">ورود به حساب</a></p>
+        
+        <div id="error-massage"></div>
     </form>
-
-
     </div>
+    <script>
+        const form=document.getElementById('form-register');
+        form.addEventListener('submit',function(event)
+        {
+            const nationalCodeInput=document.getElementById('nationalCode');
+            if(!nationalCodeInput.checkVisibility()){
+                event.preventDefault();
+                const errorMassageDiv=document.getElementById('error-massage');
+                errorMassageDiv.innerHTML='کد ملی الطفا 10 رقم وارد کنید';
+            }
+        })
+    </script>
     
 </body>
 </html>

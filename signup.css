@@ -1,0 +1,145 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(199, 198, 198, 0.556);
+    
+}
+
+.main{
+    background-color: white;
+    width: 500px;
+    height: 1200px;
+    overflow-y: scroll;
+    display:flex;
+    flex-direction: row;
+    padding: 50px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 30px;
+    margin-top: 20px;   
+
+}
+#form-register{
+    display: flex;
+    flex-direction: column;
+}
+
+#titr{
+    margin: 20px;
+}
+
+#titrpp{
+    color:rgb(16, 76, 215);
+    font-size: normal;
+}
+
+
+#fullname ,#emailuser ,#nationalCode ,#emailuser ,#pass{
+    border: 1px solid rgb(232, 240, 254);
+    border-radius: 20px;
+    background-color: rgb(232, 240, 254);
+    padding: 15px;  
+    width: 470px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+ #pass:hover{
+    border:1px solid rgba(182, 214, 242, 0.827);
+    background-color: rgba(196, 223, 248, 0.988);
+}
+#fullname:hover{
+    border:1px solid rgba(182, 214, 242, 0.827);
+    background-color: rgba(196, 223, 248, 0.988);
+}
+#emailuser:hover{
+    border:1px solid rgba(182, 214, 242, 0.827);
+    background-color: rgba(196, 223, 248, 0.988);
+}
+#nationalCode:hover{
+    border:1px solid rgba(182, 214, 242, 0.827);
+    background-color: rgba(196, 223, 248, 0.988);
+}
+#emailuser:hover{
+    border:1px solid rgba(182, 214, 242, 0.827);
+    background-color: rgba(196, 223, 248, 0.988);
+}
+#educationLevel{
+    border: 1px solid rgb(232, 240, 254);
+    border-radius: 20px;
+    background-color: rgb(232, 240, 254);
+    padding: 15px;  
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+*option{
+    border: 1px solid rgb(232, 240, 254);
+    border-radius: 20px;
+    background-color: rgb(232, 240, 254);
+    padding: 15px;  
+    width: 500px;
+}
+#Gender{
+    margin: 20px;
+}
+#rememberMe:hover{
+    cursor: pointer;
+    color: #007aff;
+}
+
+
+
+#vorodhesab{
+    color: rgb(16, 76, 215);
+    text-decoration: none;
+}
+#sabtnam{
+    background-color: #286bb8;
+    border: 1px solid #286bb8;
+    border-radius: 10px;
+    color: white;
+    height: 65px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+#sabtnam:hover{
+    cursor: pointer;
+    background-color: rgb(25, 60, 142);
+}
+#google{
+    border: 2px solid rgb(238, 238, 238);
+    background-color:white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+
+    border-radius: 10px;
+}
+#google:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+
+#forget{
+    color:rgb(16, 76, 215);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none; 
+}
+
+#forget:hover{
+    cursor: pointer;
+    color: #007aff;
+}
+img{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-right: 10px;
+
+}
