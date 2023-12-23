@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body , header{
+        margin: 0;
+    }
+    body{
+        background-color: #eff1f5;
+    }
+    .header{
+        display: flex;
+        /* background-color: #286bb8e6; */
+        background-color: #286bb8;
+        box-shadow: 0px 0px 5px 0px black;
+        color: #fff;
+        width: 100%;
+        height: 9vh;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .text{   
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        text-align: center;
+        flex-grow: 1;
+    }
+    #content{
+        display: flex;
+        width: 60vw;
+        direction: rtl;
+    }
+    #buttons{
+        display: flex;
+        width: 40vw;
+        justify-content: center;
+        
+    }
+    .head{
+        display: flex;
+        direction: rtl;
+        padding: 1%;
+        justify-content: space-evenly;
+    }
+    #logo{
+        display: inline-block;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: auto;
+
+    }
+
+    ul {    
+        display: flex;
+    }
+    .navs{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .hover {
+        display: inline-block;
+        width: auto;
+        white-space: nowrap; /* yek khat neshan dadan */
+        display: flex;
+        cursor: pointer;
+        list-style: none; /* pak kakrdane noghte */
+        align-items: center;
+        font-family: 'B Nazanin' ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .hover:hover ul {
+        display: block;
+    }
+    .hover ul {
+        display: none;
+    }
+    .topnav {
+        display: flex;
+        align-items: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .hover:hover li {
+        color: #286bb8e6;
+    }
+    .longuage:hover li {
+        color: #286bb8e6;
+    }
+    .search{
+        width: 45% ;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background: white;
+        border-radius: 1vh;
+        border-width: 0;
+        margin: 4%;
+    }
+    #imgSearch{
+        width: 10%;
+        height: auto;
+    }
+    .search-input{
+        height: 70%;
+        background: #fff;
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 80%;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;      
+        outline: none!important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: medium;
+        
+    }
+    .login{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #sub{
+        white-space: nowrap;
+        background-color: #2564ace6;
+        border-radius: 10px;
+        width: 100%;
+        height: 55%;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+        border-color: #2564ace6;
+        cursor: pointer;
+        border: none;
+    }
+    #sub:hover {
+    background-color: #184981e6;
+    }
+    .top-main{
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
+        padding-bottom: 12px;
+    }
+
+    .longuage{
+        white-space: nowrap; /* yek khat neshan dadan */
+        display: flex;
+        cursor: pointer;
+        list-style: none; /* pak kakrdane noghte */
+        align-items: center;
+        padding: 0 0 0 9%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+        padding-top: 50px;
+    }
+    @media(max-width:600px)
+    {
+        #dashboard-btn{
+            display: none;
+        }
+    }
+    li {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    #backgraund1{
+        margin-left: 7%;
+    }
+    #backgraund2{
+        padding: 5%;
+        height: fit-content;
+    }
+    #background{
+        display: flex;
+    }
+    #text{
+        direction: rtl;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        padding-top: 6%;
+    }
+    #text1{
+        color: #286bb8e6;
+        font-size: large;
+    }
+    #text2{
+        font-size: xx-large;
+    }
+    #text3{
+        color: #286bb8e6;
+        font-size: xx-large;
+    }
+    footer{
+        background-color: #286bb8;
+        color: #fff;
+        width: 100%;
+        height: 25vh;
+        direction: rtl;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: normal;
+    }
+    #logoFooter{
+        margin-right: 4%;
+        margin-top: 1%;
+    }
+    #footer1{
+        display: flex;
+    }
+    #footer2{
+        display: flex;
+    }
+    .search-email{
+        width: 35vh;
+        height: 4vh;
+        border-radius: 4vh;
+        border: none;      
+        outline: none!important;
+    }
+    th, td {
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 6%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        color: #286bb8;
+        font-size: larger;
+        background-color: white;
+        border-radius: 4vh;
+        border: none;      
+        outline: none!important;
+        box-shadow: 0px 0px 5px 0px rgb(184, 181, 181);
+
+        
+    }
+
+
+        
+
+
+</style>
+<body>
+    <header>
+        <div class="header">
+            <div class="text">
+                "کدنویسی،هنری برای خلق دنیای بهتر"
+            </div>
+        </div>
+       
+    </header>
+    <div class="head">
+        <div id="content">
+            <div id="logo"> 
+                <img src="logo.png" alt="logo" style=" width:90%; height:68%">  
+            </div>
+    
+        <div class="topnav">
+        </div>
+            <ul class="navs">
+              <div class="hover">
+                <li>دوره ها</li>
+              </div>
+              <div class="hover">
+                <li>بلاگ</li>
+              </div>
+              <div class="hover">
+                <li>درباره ما</li>
+              </div>
+              <div class="hover">
+                <li>مدرسین</li>
+              </div>
+              <div class="hover">
+                <li>بوتکمپ ها</li>
+              </div>
+              <div class="hover">
+                <li>پرسش و پاسخ</li>
+              </div>
+            </ul>
+        </div>
+        <div id="buttons">
+            <div class="search">
+                <input type="text" class="search-input"  placeholder="هرچی میخوای جست و جو کن" >
+                <img id="imgSearch" src="search.jpg"/>
+            </div>
+            <div class="login">
+                <button id="sub" onclick="login();">ورود یا ثبت نام</button>
+            </div>
+        </div>
+
+    </div>
+    <hr color="#e1eaec">
+
+    <main>
+        <div id="background"> 
+            <img id="backgraund1" src="backgraund.png" alt="background" style=" width:50%;">  
+            <img id="backgraund2" src="backgraund2.png" alt="background" style=" width:11%;">
+            <div id="text">
+                <p id="text1">دوره مورد علاقه خود را شروع کنید</p>
+                <p id="text2">هر کسی باید یاد بگیره</p>
+                <p id="text3">که چطور کد بزنه</p>
+                
+            </div> 
+        </div>
+        <div>
+            <table style="width:100%; height: 20%; padding:5%" >
+                <tr>
+                  <th>ثبت نام بوت کمپ</th>
+                  <th>نقشه راه</th> 
+                  <th>رایگان یاد بگیر</th>
+                </tr>
+              </table>
+        </div>
+       
+    
+
+
+    </main>
+
+    <footer>
+        <div id="footer1">
+            <img  id="logoFooter" src="footer1.png" alt="logoFooter" style=" width:13%; height:5%">
+            <p style="padding-right: 44%; padding-top: 1%;">عضویت در خبرنامه</p>
+            <div style="padding: 2% 1% 0% 0%;">
+                <input type="text" class="search-email"  placeholder="ایمیلتو وارد کن" >
+            </div>
+
+            
+        </div>
+        <div id="footer2">
+            <img id="logoFooter" src="footer2.png" alt="logoFooter" style=" width:13%; height:5%"> 
+            <p style="padding-right: 29%;
+            padding-top: 1%;">هر کسی باید یاد بگیره که چه‌طور کد بزنه چرا که برنامه‌نویسی به شما یاد می‌ده که چه‌طور فکر کنید.
+            </p>
+        </div>
+    </footer>
+    
+
+    <script type="text/javascript">
+        function login() {
+            window.location.href = "login.html";
+        }
+    </script>
+      
+</body>
+</html>
