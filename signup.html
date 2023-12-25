@@ -70,7 +70,7 @@
         مرا به خاطر بسپار:
         <input type="checkbox" id="rememberMe" name="rememberMe" value="remembered">
         </div>
-        <button name="button" id="sabtnam">ثبت نام</button>
+        <button name="button" id="sabtnam" >ثبت نام</button>
         
 
         <p id="sabt"&nbsp >قبلا ثبت نام کرده اید؟<a href="login.html" id="vorodhesab">ورود به حساب</a></p>
@@ -79,6 +79,15 @@
     </form>
     </div>
     <script>
+        /*function checkUsername(){
+            var username=document.getElementById("fullname").value;
+            if(username.length <5){
+                alert("نام کاربری حداقل 5 حرف باشد");
+            }else{
+                alert("نام کاربری صحیح است");
+            }
+        }
+        */
         const form=document.getElementById('form-register');
         form.addEventListener('submit',function(event)
         {
