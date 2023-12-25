@@ -158,28 +158,7 @@ background-color: #184981e6;
     font-size: larger;
     padding-top: 50px;
 }
-@media(max-width:600px)
-{
-    #dashboard-btn{
-        display: none;
-    }
-}
-#aside{
-    background-color: white;
-    width: 250px;
-    height: 800px;
-    transition: width 1s;
-    box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    z-index: 999;
-    display: none;
-}
-#dashbord{
-    list-style: none;
-    direction: rtl;
-}
+
 li {
   font-weight: 500;
   white-space: nowrap;

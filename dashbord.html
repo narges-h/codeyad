@@ -7,6 +7,38 @@
     <title>کدیاد-حساب کاربری من</title>
     <link rel="stylesheet" href="dashborStyle.css">
 </head>
+<style>
+    .ticket{
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        white-space: nowrap;
+        margin: 3% 13%;
+        cursor: pointer;
+    }
+    #t1{
+        border: 2px solid #ff8600 ;
+        width: 30vh;
+        height: 12vh;
+    }
+    #t2{
+        border: 2px solid #2196f3;
+        width: 30vh;
+        height: 12vh;
+    }
+    #t3{
+        border: 2px solid #4caf50;
+        width: 30vh;
+        height: 12vh;
+    }
+    #t4{
+        border: 2px solid #2b2f5e;
+        width: 30vh;
+        height: 12vh;
+    }
+    
+    
+</style>
 
 <body>
     <header>
@@ -16,7 +48,6 @@
             </div>
         </div>   
     </header>
-
     <main>
         <div class="head">
             <div class="logo">
@@ -110,7 +141,26 @@
                     </div>
                 </aside>
                 <div class="m">
-                    <p style="padding-right: 3%;">وضعیت تیکت ها</p>
+                    <p style="padding-right: 5%; font-family: system-ui;">وضعیت تیکت ها</p>
+                    <hr color="#e1eaec" width="90%">
+                    <div class="ticket">
+                        <div id="t1">
+                            <p style="color: #ff8600 ;  padding-right: 25%;">در انتظار بررسی</p>
+                            <img id="orange" src="orange.svg" alt="orange" style=" width:30%; height:50%">
+                        </div>
+                        <div id="t2">
+                            <p style="color: #2196f3 ;  padding-right: 28%;">در حال بررسی</p> 
+                            <img id="blue" src="blue.svg" alt="blue" style=" width:30%; height:50%"> 
+                        </div>
+                        <div id="t3">
+                            <p style="color: #4caf50 ;  padding-right: 30%;">پاسخ داده شده</p> 
+                            <img id="green" src="green.svg" alt="green" style=" width:30%; height:50%">     
+                        </div>
+                        <div id="t4">
+                            <p style="color: #2b2f5e ;  padding-right: 38%;">بسته شده</p> 
+                            <img id="purple" src="purple.svg" alt="purple" style=" width:30%; height:50%">     
+                        </div>
+                    </div>
                 </div>
         </div>
     </main>
