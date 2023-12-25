@@ -5,106 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>کدیاد-حساب کاربری من</title>
+    <link rel="stylesheet" href="dashborStyle.css">
 </head>
 <style>
-    body , header{
-        margin: 0;
-    }
-    body{
-        background-color: rgb(222, 234, 250);
-    }
-    .header{
+    .ticket{
         display: flex;
-        background-color: #286bb8e6;
-        color: #fff;
-        width: 100%;
-        height: 9vh;
-        left: 0;
-        top: 0;
-        z-index: 100;
-        position: relative;
+        width: 70%;
         justify-content: space-between;
-        align-items: center;
-    }
-    .text{   
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: x-large;
-        text-align: center;
-        flex-grow: 1;
-    }
-    #dashbord{
-        list-style: none;
-        direction: rtl;
-        margin-top: 2vh;
+        white-space: nowrap;
+        margin: 3% 13%;
         cursor: pointer;
     }
-    li {
-      font-weight: 500;
-      white-space: nowrap;
+    #t1{
+        border: 2px solid #ff8600 ;
+        width: 30vh;
+        height: 12vh;
     }
-    .dash:hover li {
-        color: #286bb8e6;
+    #t2{
+        border: 2px solid #2196f3;
+        width: 30vh;
+        height: 12vh;
     }
-    .dash:hover{
-        background-color: #eff1f5;
+    #t3{
+        border: 2px solid #4caf50;
+        width: 30vh;
+        height: 12vh;
     }
-    .dash{
-        display: flex;
-        padding: 15px;
+    #t4{
+        border: 2px solid #2b2f5e;
+        width: 30vh;
+        height: 12vh;
     }
-    .dash1{
-        display: flex;
-        padding: 15px;
-        background-color: #286bb8;
-        color: #ffffff;
-    }
-    .dash li{
-        padding: 5px 15px;
-    }
-    .main{
-        display: flex;   
-        direction: rtl;
-    }
-    .m{
-        background-color: #eff1f5;
-        margin-top: 1%;
-        border: 1px solid #eff1f5;
-        width: 85%;
-        height: 80vh;
-    }
-    footer{
-        background-color: #286bb8;
-        color: #fff;
-        width: 100%;
-        height: 25vh;
-        direction: rtl;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: normal;
-    }
-    #logoFooter{
-        margin-right: 4%;
-        margin-top: 1%;
-    }
-    #footer1{
-        display: flex;
-    }
-    #footer2{
-        display: flex;
-    }
-    .head{
-        direction: rtl;
-        display: flex;
-    }
-    #logo{
-        padding:1vh 34vh 0vh 0vh;
-    }
-    
-
-    
-
     
     
 </style>
+
 <body>
     <header>
         <div class="header">
@@ -113,7 +48,6 @@
             </div>
         </div>   
     </header>
-
     <main>
         <div class="head">
             <div class="logo">
@@ -207,7 +141,26 @@
                     </div>
                 </aside>
                 <div class="m">
-                    <p style="padding-right: 3%;">وضعیت تیکت ها</p>
+                    <p style="padding-right: 5%; font-family: system-ui;">وضعیت تیکت ها</p>
+                    <hr color="#e1eaec" width="90%">
+                    <div class="ticket">
+                        <div id="t1">
+                            <p style="color: #ff8600 ;  padding-right: 25%;">در انتظار بررسی</p>
+                            <img id="orange" src="orange.svg" alt="orange" style=" width:30%; height:50%">
+                        </div>
+                        <div id="t2">
+                            <p style="color: #2196f3 ;  padding-right: 28%;">در حال بررسی</p> 
+                            <img id="blue" src="blue.svg" alt="blue" style=" width:30%; height:50%"> 
+                        </div>
+                        <div id="t3">
+                            <p style="color: #4caf50 ;  padding-right: 30%;">پاسخ داده شده</p> 
+                            <img id="green" src="green.svg" alt="green" style=" width:30%; height:50%">     
+                        </div>
+                        <div id="t4">
+                            <p style="color: #2b2f5e ;  padding-right: 38%;">بسته شده</p> 
+                            <img id="purple" src="purple.svg" alt="purple" style=" width:30%; height:50%">     
+                        </div>
+                    </div>
                 </div>
         </div>
     </main>

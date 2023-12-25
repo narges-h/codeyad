@@ -1,0 +1,254 @@
+body , header{
+    margin: 0;
+}
+body{
+    background-color: #eff1f5;
+}
+.header{
+    display: flex;
+    background-color: #286bb8e6;
+    box-shadow: 0px 0px 5px 0px black;
+    color: #fff;
+    width: 100%;
+    height: 9vh;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.text{   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    text-align: center;
+    flex-grow: 1;
+   
+}
+#content{
+    display: flex;
+    width: 60vw;
+    direction: rtl;
+}
+#buttons{
+    display: flex;
+    width: 40vw;
+    justify-content: center;
+    
+}
+.head{
+    display: flex;
+    direction: rtl;
+    padding: 1%;
+    justify-content: space-evenly;
+}
+#logo{
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+
+}
+
+ul {    
+    display: flex;
+}
+.navs{
+    width: 100%;
+    justify-content: space-between;
+}
+.hover {
+    display: inline-block;
+    width: auto;
+    white-space: nowrap; /* yek khat neshan dadan */
+    display: flex;
+    cursor: pointer;
+    list-style: none; /* pak kakrdane noghte */
+    align-items: center;
+    font-family: 'B Nazanin' ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+.hover:hover ul {
+    display: block;
+}
+.hover ul {
+    display: none;
+}
+.topnav {
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.hover:hover li {
+    color: #286bb8e6;
+}
+.longuage:hover li {
+    color: #286bb8e6;
+}
+.search{
+    width: 45% ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: white;
+    border-radius: 1vh;
+    border-width: 0;
+    margin: 4%;
+}
+#imgSearch{
+    width: 10%;
+    height: auto;
+}
+.search-input{
+    height: 70%;
+    background: #fff;
+    padding-right: 3%;
+    padding-left: 3%;
+    width: 80%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;      
+    outline: none!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: medium;
+    
+}
+.login{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#sub{
+    white-space: nowrap;
+    background-color: #2564ace6;
+    border-radius: 10px;
+    width: 100%;
+    height: 55%;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-color: #2564ace6;
+    cursor: pointer;
+    border: none;
+}
+#sub:hover {
+background-color: #184981e6;
+}
+.top-main{
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+    padding-bottom: 12px;
+}
+
+.longuage{
+    white-space: nowrap; /* yek khat neshan dadan */
+    display: flex;
+    cursor: pointer;
+    list-style: none; /* pak kakrdane noghte */
+    align-items: center;
+    padding: 0 0 0 9%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    padding-top: 50px;
+}
+
+li {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dash:hover li {
+    color: #286bb8e6;
+}
+.dash:hover{
+    background-color: #eff1f5;
+}
+.dash{
+    display: flex;
+    padding: 15px;
+}
+.dash li{
+    padding: 5px 15px;
+}
+
+#backgraund1{
+    margin-left: 7%;
+}
+#backgraund2{
+    padding: 5%;
+    height: fit-content;
+}
+#background{
+    display: flex;
+}
+#text{
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding-top: 6%;
+}
+#text1{
+    color: #286bb8e6;
+    font-size: large;
+}
+#text2{
+    font-size: xx-large;
+}
+#text3{
+    color: #286bb8e6;
+    font-size: xx-large;
+}
+.dashboard-button{
+    cursor: pointer;
+}
+#prof{
+    padding: 3% 35% 0% 0%;
+}
+footer{
+    background-color: #286bb8;
+    color: #fff;
+    width: 100%;
+    height: 25vh;
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+#logoFooter{
+    margin-right: 4%;
+    margin-top: 1%;
+}
+#footer1{
+    display: flex;
+}
+#footer2{
+    display: flex;
+}
+.search-email{
+    width: 35vh;
+    height: 4vh;
+    border-radius: 4vh;
+    border: none;      
+    outline: none!important;
+}
+th, td {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 6%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #286bb8;
+    font-size: larger;
+    background-color: white;
+    border-radius: 4vh;
+    border: none;      
+    outline: none!important;
+    box-shadow: 0px 0px 5px 0px rgb(184, 181, 181);
+
+    
+}
