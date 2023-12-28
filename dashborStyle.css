@@ -96,3 +96,31 @@ footer{
     border: none;      
     outline: none!important;
 }
+.ticket{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin: 3% 13%;
+    cursor: pointer;
+}
+#t1{
+    border: 2px solid #ff8600 ;
+    width: 30vh;
+    height: 12vh;
+}
+#t2{
+    border: 2px solid #2196f3;
+    width: 30vh;
+    height: 12vh;
+}
+#t3{
+    border: 2px solid #4caf50;
+    width: 30vh;
+    height: 12vh;
+}
+#t4{
+    border: 2px solid #2b2f5e;
+    width: 30vh;
+    height: 12vh;
+}

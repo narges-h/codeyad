@@ -7,38 +7,6 @@
     <title>کدیاد-حساب کاربری من</title>
     <link rel="stylesheet" href="dashborStyle.css">
 </head>
-<style>
-    .ticket{
-        display: flex;
-        width: 70%;
-        justify-content: space-between;
-        white-space: nowrap;
-        margin: 3% 13%;
-        cursor: pointer;
-    }
-    #t1{
-        border: 2px solid #ff8600 ;
-        width: 30vh;
-        height: 12vh;
-    }
-    #t2{
-        border: 2px solid #2196f3;
-        width: 30vh;
-        height: 12vh;
-    }
-    #t3{
-        border: 2px solid #4caf50;
-        width: 30vh;
-        height: 12vh;
-    }
-    #t4{
-        border: 2px solid #2b2f5e;
-        width: 30vh;
-        height: 12vh;
-    }
-    
-    
-</style>
 
 <body>
     <header>
@@ -80,7 +48,7 @@
                             <svg width="24" height="25" viewBox="0 0 66 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M38.9583 43.3438H25.2083C11.2864 43.3438 0 54.5788 0 68.4375C0 70.9567 2.05248 73 4.58333 73H59.5833C62.1141 73 64.1667 70.9567 64.1667 68.4375C64.1667 54.5788 52.8803 43.3438 38.9583 43.3438ZM7.01679 66.1563C8.14832 57.1597 15.8698 50.1875 25.2083 50.1875H38.9583C48.2911 50.1875 56.0168 57.1667 57.1483 66.1563H7.01679ZM32.0833 36.5C42.2081 36.5 50.4167 28.3289 50.4167 18.25C50.4167 8.17115 42.2081 0 32.0833 0C21.9585 0 13.75 8.17115 13.75 18.25C13.75 28.3303 21.957 36.5 32.0833 36.5ZM32.0833 6.84375C38.401 6.84375 43.5417 11.9609 43.5417 18.25C43.5417 24.5391 38.401 29.6563 32.0833 29.6563C25.7655 29.6563 20.625 24.5377 20.625 18.25C20.625 11.9609 25.7669 6.84375 32.0833 6.84375Z" fill="black" fill-opacity="0.4"/>
                             </svg>
-                            <li>اطلاعات کاربری</li>
+                            <li onclick="profilePage();">اطلاعات کاربری</li>
                     </div>
                     <div class="dash">
                             <svg width="24" height="25" viewBox="0 0 66 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,6 +154,9 @@
     <script type="text/javascript">
         function login() {
             window.location.href = "login.html";
+        }
+        function profilePage() {
+            window.location.href = "profile.html";
         }
     </script>
     
