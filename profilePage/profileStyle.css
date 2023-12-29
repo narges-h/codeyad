@@ -156,7 +156,7 @@
 .gradienttext {
     font-size: 24px;
     margin-bottom: 5px;
-    color: #000000;
+    color: #286bb8;
     text-align: center;
   }
 .p {
@@ -208,7 +208,9 @@
     outline: none!important;
     background-color: #286bb8;
     color: white;
-    margin-right: 32%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
 
 
