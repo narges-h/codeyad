@@ -93,8 +93,8 @@
 }
 /*right card  */
 .left-container {
-    background: #000000; 
-    background: linear-gradient(to right, #286bb8e6, #ffffff); 
+    background: white;
+    /* background: linear-gradient(to right, #286bb8e6, #ffffff);  */
     flex: 1;
     max-width: 30%;
     display: flex;
@@ -105,11 +105,12 @@
     margin: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(222, 234, 250);
   }
   /* left card*/
 .right-container {
-    background: #286bb8e6; 
-    background: linear-gradient(to left, #fffdfd, #286bb8e6); 
+    background: white;
+    /* background: linear-gradient(to left, #fffdfd, #286bb8e6);  */
     flex: 1;
     max-width:70%;
     height:430px;
@@ -117,6 +118,7 @@
     margin: 20px;
     border-radius:30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(222, 234, 250);
   }
   @media only screen and (max-width: 860px) {
     .card
@@ -142,7 +144,7 @@
         max-width:100%; 
     }
   }
-  .img {
+.img {
     width: 200px;
     height: 200px;
     max-width: 200px;
@@ -151,21 +153,19 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
-  .gradienttext {
+.gradienttext {
     font-size: 24px;
     margin-bottom: 5px;
-    background-image: linear-gradient(to right, #ee00ff 0%, #ffff07 100%);
-    color: transparent;
-    -webkit-background-clip: text;
+    color: #000000;
     text-align: center;
   }
-  .p {
+.p {
     font-size: 18px;
     margin-bottom: 20px;
     color:black
   }
   
-  .textAll {
+.textAll {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,40 +175,40 @@
     border-collapse: collapse;
   }
   
-  .textAll td {
+.textAll td {
     
     padding: 10px;
     border: none;
     border-radius: 20px;
-    color: black;
+    color: #175399e6;
   }
   
-  .textAll td:first-child {
+.textAll td:first-child {
     font-weight: bold;
   }
-  .credit a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 800;
-}
-
-.credit {
-    color: #f144a0;
-  text-align: center;
-  margin-top: 10px;
-}    
 #logoimg{
-  width: 50px;
-  height: 30px;
+    width: 50px;
+    height: 30px;
 }
 #codemeli ,#email,#phone-number,#password,#username{
-  border: 1px solid #f144a0;
-  border-radius: 20px;
-  height: 20px;
-  text-align: center;
-  background: linear-gradient(to right, #307cd3e6, #ffffff);
- color: #000000;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    height: 25px;
+    text-align: center;
+    color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;      
+    outline: none!important;
+}
+.edit{
+    width: 35%;
+    height: 8%;
+    align-items: center;
+    border-radius: 10px;
+    border: none;      
+    outline: none!important;
+    background-color: #286bb8;
+    color: white;
+    margin-right: 32%;
 }
 
 
