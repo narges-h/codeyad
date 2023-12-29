@@ -131,7 +131,7 @@ li {
     margin-top: 1%;
     border: 1px solid #eff1f5;
     width: 85%;
-    height: 80vh;
+    height: fit-content;
 }
 footer{
     background-color: #286bb8;
