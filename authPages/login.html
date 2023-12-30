@@ -6,31 +6,31 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body dir="rtl" >
-    <div class="main">
-    <form id="form-sign" method="get">
+    <div class="main" >
+        <form id="form-sign" method="get">
         <div id="titr">
             <h1 id="titrpp">ورود به حساب کاربری</h1>
         </div>
 
         <div id="email">
             <label for="emaill">ایمیل</label><br>
-            <input type="email" id="emailuser" placeholder="name@example.com" >
+            <input type="email" id="emailuser" placeholder="name@example.com" required >
 
         </div>
         
         <div id="phone">
             <label for="emaill">شماره تلفن</label><br>
-            <input type="tel" id="phoneNumbers" placeholder="09351110015">
+            <input type="tel" id="phoneNumbers" placeholder="09351110015" required>
 
         </div>
         
         <div id="password">
             <label for="passwordd">رمز عبور</label>
-            <input type="password" id="pass" placeholder="******">
+            <input type="password" id="pass" placeholder="******" required>
         </div>
         
 
-        <button type="submit" name="submit"  id="open">ورود</button>
+        <button type="submit" name="submit" id="open" onclick="validateLoginForm(event)">ورود</button>
         <a id="forget" href="#" >کلمه عبور خود را فراموش کرده اید؟</a>
 
         <button name="button2" id="google"><a>ورود با گوگل</a><img  src="p1.png" alt="google logo"></button>
@@ -40,6 +40,7 @@
 
 
     </div>
+    <script src="./LoginJs.js"></script>
     
 </body>
 </html>

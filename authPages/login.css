@@ -126,3 +126,7 @@ img{
     padding-right: 10px;
 
 }
+.invalid {
+    border: 2px solid red !important;
+  }
+  

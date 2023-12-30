@@ -33,7 +33,7 @@ body{
 }
 
 
-#fullname ,#emailuser ,#nationalCode ,#emailuser ,#pass{
+#fullname ,#emailuser ,#nationalCode ,#emailuser ,#pass ,#phoneNumbers{
     border: 1px solid rgb(232, 240, 254);
     border-radius: 20px;
     background-color: rgb(232, 240, 254);
@@ -143,3 +143,6 @@ img{
     padding-right: 10px;
 
 }
+.invalid {
+    border: 2px solid red !important;
+  }

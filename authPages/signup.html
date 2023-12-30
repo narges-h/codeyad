@@ -18,35 +18,31 @@
 
         <div id="fullnames">
             <label for="fullname">نام کاربری</label><br>
-            <input type="text" id="fullname" name="fullname" pattern="[A-Za-z\s]+" required >
+            <input type="text" id="fullname" name="fullname"  required  title="فقط حروف مجاز است" >
         </div>
         
         
         <div id="nationalCodes">
             <label for="nationalCode">کد ملی</label><br>
-            <input type="text" id="nationalCode" name="nationalCode" pattern="[0-9]{10}" required placeholder="**********">
+            <input type="text" id="nationalCode" name="nationalCode"  required placeholder="**********" title="لطفا یک کد ملی معتبر وارد کنید">
         </div>
-
-
-        
-        
-
 
         <div id="email">
             <label for="emaill">ایمیل</label><br>  
-            <input type="email" id="emailuser"  placeholder="ایمیل خود را وارد کنید">
+            <input type="email" id="emailuser"  placeholder="ایمیل خود را وارد کنید" title="لطفا ایمیل معتبر وارد کنید">
             </div>
         
 
         <div id="password">
             <label for="passwordd">رمز عبور</label>
-            <input type="password" id="pass" placeholder="******">
+            <input type="password" id="pass" placeholder="******"  title="لطفا یک رمز عبور معتبر وارد کنید.(شامل حرف بزرگ،کوچک،عدد و عبارات خاص(@#&) و از 8 یا بیشتر کرکتر باشد)">
+            
         </div>
 
         <div id="password-forget">
-            <label for="password-reapet">تکرار رمز عبور</label>
-            <input type="password" id="pass" placeholder="******">
-        </div>
+            <label for="password-reapet">شماره تلفن</label>
+            <input type="tel" id="phoneNumbers" placeholder="******"  title="لطفاً یک شماره تلفن معتبر (11 رقم که با 0 شروع می شود) وارد کنید">
+        </div>       
 
 
         <select id="educationLevel" name="educationLevel">
@@ -70,7 +66,8 @@
         مرا به خاطر بسپار:
         <input type="checkbox" id="rememberMe" name="rememberMe" value="remembered">
         </div>
-        <button name="button" id="sabtnam" >ثبت نام</button>
+        <button name="button" id="sabtnam" onclick="validateRegisterForm(event);" >ثبت نام</button>
+
         
 
         <p id="sabt"&nbsp >قبلا ثبت نام کرده اید؟<a href="login.html" id="vorodhesab">ورود به حساب</a></p>
@@ -78,27 +75,7 @@
         <div id="error-massage"></div>
     </form>
     </div>
-    <script>
-        /*function checkUsername(){
-            var username=document.getElementById("fullname").value;
-            if(username.length <5){
-                alert("نام کاربری حداقل 5 حرف باشد");
-            }else{
-                alert("نام کاربری صحیح است");
-            }
-        }
-        */
-        const form=document.getElementById('form-register');
-        form.addEventListener('submit',function(event)
-        {
-            const nationalCodeInput=document.getElementById('nationalCode');
-            if(!nationalCodeInput.checkVisibility()){
-                event.preventDefault();
-                const errorMassageDiv=document.getElementById('error-massage');
-                errorMassageDiv.innerHTML='کد ملی الطفا 10 رقم وارد کنید';
-            }
-        })
-    </script>
+    <script src="./SignUp.js"></script>
     
 </body>
 </html>
