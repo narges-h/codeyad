@@ -152,4 +152,20 @@ img{
     font-size: 12px;
     margin-top: 5px;
  }
- 
+ #sabt{
+    text-align: center;
+ }
+
+#google {
+    border: 2px solid rgb(238, 238, 238);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+    border-radius: 10px;
+}
+#google:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}

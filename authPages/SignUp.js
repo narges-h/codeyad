@@ -84,7 +84,7 @@ function validateRegisterForm(event) {
        if (!emailPattern.test(emailValue)) {
         var errorMessage = document.createElement('p');
         errorMessage.className = 'error-message';
-        errorMessage.innerText = 'لطفا ایمیل درست وارد کنید';
+        errorMessage.innerText ='ایمیل نامعتبر است';
         document.getElementById('email').appendChild(errorMessage);
         document.getElementById('emailuser').classList.add("invalid");
         isValid = false;
@@ -100,7 +100,7 @@ function validateRegisterForm(event) {
      if (!isValidNationalCode(nationalCodeValue)) {
         var errorMessage = document.createElement('p');
         errorMessage.className = 'error-message';
-        errorMessage.innerText = 'لطفا یک کد ملی معتبر وارد کنید';
+        errorMessage.innerText = 'کدملی نامعتبر است';
         document.getElementById('nationalCodes').appendChild(errorMessage);
         document.getElementById('nationalCode').classList.add("invalid");
         isValid = false;
