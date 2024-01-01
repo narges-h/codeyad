@@ -1,12 +1,68 @@
-body{
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot");
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2") format("woff2"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff") format("woff"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Light.eot");
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff/IRANSansWeb(FaNum)_Light.woff") format("woff"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum).eot");
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff2/IRANSansWeb(FaNum).woff2") format("woff2"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff/IRANSansWeb(FaNum).woff") format("woff"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/ttf/IRANSansWeb(FaNum).ttf") format("ttf");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Medium.eot");
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Bold.eot");
+    src: url("../Assets/Font/IRANSans/WebFonts/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/woff/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+        url("../Assets/Font/IRANSans/WebFonts/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf") format("ttf");
+}
+
+body {
     display: flex;
     justify-content: center;
     background-color: rgba(199, 198, 198, 0.556);
-    
+    font-family: "IranSans";
+
 }
 
 
-.main{
+.main {
     background-color: white;
     width: 500px;
     height: 1000px;
@@ -15,95 +71,110 @@ body{
     padding: 20px;
     border: 1px solid rgb(194, 194, 194);
     border-radius: 30px;
- 
-    
+
+
 }
 
-#form-sign{
+#form-sign {
     display: flex;
     flex-direction: column;
 }
-#titrpp{
-    color:rgb(16, 76, 215);
+
+#titrpp {
+    color: rgb(16, 76, 215);
     font-size: normal;
 }
 
-#email ,#phone ,#password {
+#email,
+#phone,
+#password {
     margin-top: 30px;
 }
-#pass ,#emailuser,#phoneNumbers {
+
+#pass,
+#emailuser,
+#phoneNumbers {
     margin-top: 10px;
 }
 
-#emailuser , #phoneNumbers ,#pass input{
-    border: 1px solid rgb(232, 240, 254) ;
-    border-radius: 20px;
-    background-color: rgb(232, 240, 254);
-    padding: 15px;
-  
-    width: 470px;
-}
-#phoneNumbers{
-    text-align: right;
-}
-
-#pass{
+#emailuser,
+#phoneNumbers,
+#pass input {
     border: 1px solid rgb(232, 240, 254);
     border-radius: 20px;
     background-color: rgb(232, 240, 254);
-    padding: 15px;  
+    padding: 15px;
+
+    width: 470px;
+}
+
+#phoneNumbers {
+    text-align: right;
+}
+
+#pass {
+    border: 1px solid rgb(232, 240, 254);
+    border-radius: 20px;
+    background-color: rgb(232, 240, 254);
+    padding: 15px;
     width: 470px;
 }
 
 
-#forget{
-    color:rgb(16, 76, 215);
+#forget {
+    color: rgb(16, 76, 215);
     padding-top: 20px;
     padding-bottom: 20px;
     text-decoration: none;
-    
+
 }
-#pass:hover{
-    
-    border:1px solid rgba(182, 214, 242, 0.827);
+
+#pass:hover {
+
+    border: 1px solid rgba(182, 214, 242, 0.827);
     background-color: rgba(196, 223, 248, 0.988);
 }
-#phoneNumbers:hover{
-    
-    border:1px solid rgba(182, 214, 242, 0.827);
+
+#phoneNumbers:hover {
+
+    border: 1px solid rgba(182, 214, 242, 0.827);
     background-color: rgba(196, 223, 248, 0.988);
 }
-#emailuser:hover{
-    
-    border:1px solid rgba(182, 214, 242, 0.827);
+
+#emailuser:hover {
+
+    border: 1px solid rgba(182, 214, 242, 0.827);
     background-color: rgba(196, 223, 248, 0.988);
-  
+
 }
 
 
-#google{
+#google {
     border: 2px solid rgb(238, 238, 238);
-    background-color:white;
-    padding: 20px;
+    background-color: white;
+    padding: 10px;
     text-align: center;
     margin-top: 50px;
     color: black;
-
+    font-size: larger;
     border-radius: 10px;
 }
-#google:hover{
+
+#google:hover {
     cursor: pointer;
     opacity: 0.7;
 }
 
-#sabt{
+#sabt {
     text-align: center;
 }
-#sabtnam{
+
+#sabtnam {
     color: rgb(16, 76, 215);
     text-decoration: none;
 }
-#open{
+
+#open {
     background-color: #286bb8;
     border: 1px solid #286bb8;
     border-radius: 10px;
@@ -112,25 +183,29 @@ body{
     padding: 10px;
     text-align: center;
     margin-top: 20px;
+    font-size: larger;
 }
-#open:hover{
+
+#open:hover {
     cursor: pointer;
     background-color: rgb(25, 60, 142);
 }
 
 
-img{
-    width: 20px;
-    height: 20px;
+img {
+    width: 30px;
+    height: 30px;
     text-align: center;
     padding-right: 10px;
 
 }
+
 .invalid {
     border: 2px solid red !important;
-  }
-  .error-message {
+}
+
+.error-message {
     color: red;
     font-size: 12px;
     margin-top: 5px;
- }
+}
