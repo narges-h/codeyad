@@ -129,4 +129,8 @@ img{
 .invalid {
     border: 2px solid red !important;
   }
-  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+ }
