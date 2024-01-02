@@ -1,135 +1,180 @@
 document.getElementById('form-register').addEventListener('submit', validateRegisterForm);
 
-   var inputFields = document.querySelectorAll("#form-register input");
-   inputFields.forEach(function (field) {
-    field.addEventListener('input', function () {
-      // Remove the invalid class if the field is not empty
-      if (this.value !== '') {
+var inputFields = document.querySelectorAll("#form-register input");
+inputFields.forEach(function (field) {
+ field.addEventListener('input', function () {
+    if (this.value !== '') {
         this.classList.remove("invalid");
-      } else {
-        // Add the invalid class if the field is empty
+    } else {
         this.classList.add("invalid");
-      }
-    });
-   });
+    }
+ });
+});
+
 function isValidNationalCode(nationalCode) {
-  var regex = /^[0-9]{10}$/;
-  if (!regex.test(nationalCode)) {
-      return false;
-  }
+ var regex = /^[0-9]{10}$/;
+ if (!regex.test(nationalCode)) {
+    return false;
+ }
 
-  let sumnationalCodeNumber = 0;
-  for (let i = 0; i < 9; i++) {
-      sumnationalCodeNumber += parseInt(nationalCode[i]) * (10 - i);
-  }
+ let sumnationalCodeNumber = 0;
+ for (let i = 0; i < 9; i++) {
+    sumnationalCodeNumber += parseInt(nationalCode[i]) * (10 - i);
+ }
 
-  var rem = sumnationalCodeNumber % 11;
-  var lastNationalCodeDigit = parseInt(nationalCode[9]);
-  if ((rem > 1 && (11 * rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) {
-      return true;
-  }
+ var rem = sumnationalCodeNumber % 11;
+ var lastNationalCodeDigit = parseInt(nationalCode[9]);
+ if ((rem > 1 && (11 * rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) {
+    return true;
+ }
 
-  return false;
+ return false;
 }
 
+function findErrorMessage(fieldId) {
+    switch (fieldId) {
+     case 'fullname':
+       return document.getElementById('fullnameError');
+     case 'nationalCode':
+       return document.getElementById('nationalCodeError');
+     case 'emailuser':
+       return document.getElementById('emailError');
+     case 'pass':
+       return document.getElementById('passwordError');
+     case 'phoneNumbers':
+       return document.getElementById('phoneNumbersError');
+     case 'gender':
+       return document.getElementById('genderError');
+     default:
+       return null;
+    }
+ }
+ var isValid = true;
+ 
+ 
 function validateRegisterForm(event) {
     event.preventDefault(); // Prevent the form from submitting by default
- 
-    var isValid = true;
-    var email = document.getElementById('emailuser').value;
-    var phone = document.getElementById('phoneNumbers').value;
-    var password = document.getElementById('pass').value;
-    var fullname = document.getElementById('fullname').value;
-    var nationalCode= document.getElementById('nationalCode').value;
-    var educationLevel = document.getElementById('educationLevel').value;
-    var gender = document.querySelector('input[name="gender"]:checked') !== null ? document.querySelector('input[name="gender"]:checked').value : "";
- 
-    var inputFields = document.querySelectorAll("#form-register input");
-    inputFields.forEach(function (field) {
-        if (field.value === '') {
-            field.classList.add("invalid");
-            isValid = false; // Set isValid to false if any field is empty
-        }
-    });
- 
-    if (!fullname || !password || !email || !phone || !nationalCode || !gender){
-        if (!fullname) document.getElementById('fullname').classList.add("invalid");
-        if (!password) document.getElementById('pass').classList.add("invalid");
-        if (!email) document.getElementById('emailuser').classList.add("invalid");
-        if (!phone) document.getElementById('phoneNumbers').classList.add("invalid");
-        if (!nationalCode) document.getElementById('nationalCode').classList.add("invalid");
-        if (!gender) {
-            document.getElementById('genderError').innerText = 'لطفا جنسیت خود را انتخاب کنید';
-            isValid = false;
-        }
-
-    } else {
-        var usernameValue = fullname.trim();
-        var passwordValue = password.trim();
-        var emailValue = email.trim();
-        var phoneNumberValue = phone.trim();
-        var nationalCodeValue = nationalCode.trim();
-        var educationLevelValue = educationLevel.trim(); 
   
-        var fullnamePattern = /^(?![0-9])[a-zA-Z0-9\u0600-\u06FF]{3,}$/;
+    var fullname = document.getElementById('fullname');
+    var password = document.getElementById('pass');
+    var nationalCode = document.getElementById('nationalCode');
+    var phone = document.getElementById('phoneNumbers');
+    var email = document.getElementById('emailuser');
+    var isValid = true;
+  
+    var inputFields = document.querySelectorAll("#form-register input");
+    var errorMessages = document.querySelectorAll("#form-register .error-message");
+    inputFields.forEach(function (field) {
+      field.classList.remove("invalid");
+    });
+    errorMessages.forEach(function (message) {
+      message.textContent = "";
+    });
+  if (fullname) {
+      var fullnameValue = fullname.value.trim();
+      var fullnamePattern = /^(?![0-9])[a-zA-Z0-9\u0600-\u06FF]{3,}$/;
+      if (!fullnamePattern.test(fullnameValue)) {
+          fullname.classList.add("invalid");
+          var existingErrorMessage = findErrorMessage(fullname);
+          if (!existingErrorMessage) {
+              var errorMessage = document.createElement('span');
+              errorMessage.textContent = 'لطفا یک نام کاربری مناسب وارد کنید';
+              errorMessage.style.color = "red";
+              errorMessage.classList.add('error-message');
+              fullname.parentElement.appendChild(errorMessage);
+          }
+          isValid = false;
+      }
+  }
+      
+ 
+      if (password) {
+        var passwordValue = password.value.trim();
         var passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}/;
-        var phoneNumberPattern = /^0\d{10}$/;
-        var educationLevelPattern = /^(highschool|lisans|foghlisans|doctor)$/;
-        var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-     
-        if (!educationLevelPattern.test(educationLevelValue)) { 
-            alert("مدرک تحصیلی را انتخاب کنید")
-            isValid = false;
-       }
-       if (!emailPattern.test(emailValue)) {
-        var errorMessage = document.createElement('p');
-        errorMessage.className = 'error-message';
-        errorMessage.innerText ='ایمیل نامعتبر است';
-        document.getElementById('email').appendChild(errorMessage);
-        document.getElementById('emailuser').classList.add("invalid");
-        isValid = false;
-     }
-    if (!phoneNumberPattern.test(phoneNumberValue)) {
-        var errorMessage = document.createElement('p');
-        errorMessage.className = 'error-message';
-        errorMessage.innerText = 'لطفا یک شماره تلفن صحیح وارد کنید';
-        document.getElementById('password-forget').appendChild(errorMessage);
-        document.getElementById('phoneNumbers').classList.add("invalid");
-        isValid = false;
-    }  
-     if (!isValidNationalCode(nationalCodeValue)) {
-        var errorMessage = document.createElement('p');
-        errorMessage.className = 'error-message';
-        errorMessage.innerText = 'کدملی نامعتبر است';
-        document.getElementById('nationalCodes').appendChild(errorMessage);
-        document.getElementById('nationalCode').classList.add("invalid");
-        isValid = false;
-    }
-    if (!passwordPattern.test(passwordValue)) {
-        var errorMessage = document.createElement('p');
-        errorMessage.className = 'error-message';
-        errorMessage.innerText = 'لطفا رمز مناسب انتخاب کنید';
-        document.getElementById('password').appendChild(errorMessage);
-        document.getElementById('pass').classList.add("invalid");
-        isValid = false;
-    }
-      if (!fullnamePattern.test(usernameValue)) {
-                var errorMessage = document.createElement('p');
-                errorMessage.className = 'error-message';
-                errorMessage.innerText = 'لطفا نام کاربری صحیح را وارد کنید';
-                document.getElementById('fullnames').appendChild(errorMessage);
-                document.getElementById('fullname').classList.add("invalid");
-                isValid = false;
+        if (!passwordPattern.test(passwordValue)) {
+            password.classList.add("invalid");
+            var existingErrorMessage = findErrorMessage(password);
+            if (!existingErrorMessage) {
+                var errorMessage = document.createElement('span');
+                errorMessage.textContent = 'لطفا یک رمز عبور معتبر وارد کنید';
+                errorMessage.style.color = "red";
+                errorMessage.classList.add('error-message');
+                password.parentElement.appendChild(errorMessage);
             }
+            isValid = false;
         }
-    
+      }
+      
+      if (nationalCode) {
+        var nationalCodeValue = nationalCode.value.trim();
+        if (!isValidNationalCode(nationalCodeValue)) {
+            nationalCode.classList.add("invalid");
+            var existingErrorMessage = findErrorMessage(nationalCode);
+            if (!existingErrorMessage) {
+                var errorMessage = document.createElement('span');
+                errorMessage.textContent = 'لطفا کد ملی معتبر وارد کنید';
+                errorMessage.style.color = "red";
+                errorMessage.classList.add('error-message');
+                nationalCode.parentElement.appendChild(errorMessage);
+            }
+            isValid = false;
+        }
+      }
+      
+      if (phone) {
+        var phoneNumberValue = phone.value.trim();
+        var phoneNumberPattern = /^0\d{10}$/;
+        if (!phoneNumberPattern.test(phoneNumberValue)) {
+            phone.classList.add("invalid");
+            var existingErrorMessage = findErrorMessage(phone);
+            if (!existingErrorMessage) {
+                var errorMessage = document.createElement('span');
+                errorMessage.textContent = 'لطفا شماره تلفن معتبر وارد کنید';
+                errorMessage.style.color = "red";
+                errorMessage.classList.add('error-message');
+                phone.parentElement.appendChild(errorMessage);
+            }
+            isValid = false;
+        }
+      }
+      
+      if (email) {
+        var emailValue = email.value.trim();
+        var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        if (!emailPattern.test(emailValue)) {
+            email.classList.add("invalid");
+            var existingErrorMessage = findErrorMessage(email);
+            if (!existingErrorMessage) {
+                var errorMessage = document.createElement('span');
+                errorMessage.textContent = 'لطفا یک ایمیل معتبر وارد کنید';
+                errorMessage.style.color = "red";
+                errorMessage.classList.add('error-message');
+                email.parentElement.appendChild(errorMessage);
+            }
+            isValid = false;
+        }
+      }
+      
+      var genderOptions = document.querySelectorAll('#form-register input[name="gender"]');
+  var isGenderSelected = Array.from(genderOptions).some(option => option.checked);
+      
+      if (!isGenderSelected) {
+        var errorMessage = document.createElement('span');
+        errorMessage.textContent = 'لطفا جنسیت خود را انتخاب کنید';
+        errorMessage.style.color = "red";
+        errorMessage.classList.add('error-message');
+        document.getElementById('genderError').appendChild(errorMessage);
+        isValid = false;
+       }
 
-        // Redirect to the desired page if the form is valid
-        if (isValid) {
-            // Your validation logic here...
-            // If validation passes, redirect to the dashboard page
-            window.location.href = "login.html";
-        }
+ 
+       if (isValid) {
+        // Redirect to the login page
+        window.location.href = "login.html";
+       }
+       
      
-        return isValid;
-     }
+ 
+    return isValid;
+ }
+ 
