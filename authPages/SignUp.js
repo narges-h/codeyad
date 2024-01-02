@@ -12,23 +12,21 @@ inputFields.forEach(function (field) {
 });
 
 function isValidNationalCode(nationalCode) {
- var regex = /^[0-9]{10}$/;
- if (!regex.test(nationalCode)) {
-    return false;
- }
-
- let sumnationalCodeNumber = 0;
- for (let i = 0; i < 9; i++) {
-    sumnationalCodeNumber += parseInt(nationalCode[i]) * (10 - i);
- }
-
- var rem = sumnationalCodeNumber % 11;
- var lastNationalCodeDigit = parseInt(nationalCode[9]);
- if ((rem > 1 && (11 * rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) {
-    return true;
- }
-
- return false;
+  if (/^[0-9]{10}$/.test(nationalCode)) { // valid codemelli.lenght 
+    let sumCodemelliNumber = 0; 
+    for (let i = 0; i < 9; i++) { 
+        sumCodemelliNumber += parseInt(nationalCode[i]) * (10 - i); 
+    } 
+    let rem = sumCodemelliNumber % 11; 
+    let lastNationalCodeDigit = parseInt(nationalCode[9]); 
+    if ((rem > 1 && (11 - rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) { // valid codemelli 
+        return true; 
+    } else { 
+        return false; 
+    } 
+} else { // invalid codemelli 
+    return false; 
+} 
 }
 
 function findErrorMessage(fieldId) {
