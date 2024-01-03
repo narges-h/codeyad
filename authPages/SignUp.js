@@ -12,19 +12,19 @@ inputFields.forEach(function (field) {
 });
 
 function isValidNationalCode(nationalCode) {
-  if (/^[0-9]{10}$/.test(nationalCode)) { // valid codemelli.lenght 
+  if (/^[0-9]{10}$/.test(nationalCode)) { 
     let sumCodemelliNumber = 0;
     for (let i = 0; i < 9; i++) {
       sumCodemelliNumber += parseInt(nationalCode[i]) * (10 - i);
     }
     let rem = sumCodemelliNumber % 11;
     let lastNationalCodeDigit = parseInt(nationalCode[9]);
-    if ((rem > 1 && (11 - rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) { // valid codemelli 
+    if ((rem > 1 && (11 - rem === lastNationalCodeDigit)) || (rem <= 1 && rem === lastNationalCodeDigit)) { 
       return true;
     } else {
       return false;
     }
-  } else { // invalid codemelli 
+  } else { 
     return false;
   }
 }
@@ -51,7 +51,7 @@ var isValid = true;
 
 
 function validateRegisterForm(event) {
-  event.preventDefault(); // Prevent the form from submitting by default
+  event.preventDefault(); 
 
   var fullname = document.getElementById('fullname');
   var password = document.getElementById('pass');
@@ -139,6 +139,7 @@ function validateRegisterForm(event) {
   if (email) {
     var emailValue = email.value.trim();
     var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    
     if (!emailPattern.test(emailValue)) {
       email.classList.add("invalid");
       var existingErrorMessage = findErrorMessage(email);
@@ -167,7 +168,6 @@ function validateRegisterForm(event) {
 
 
   if (isValid) {
-    // Redirect to the login page
     window.location.href = "login.html";
   }
 
