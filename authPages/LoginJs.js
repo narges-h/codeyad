@@ -1,11 +1,9 @@
 var inputFields = document.querySelectorAll("#form-sign input");
 inputFields.forEach(function (field) {
   field.addEventListener('input', function () {
-    // Remove the invalid class if the field is not empty
     if (this.value !== '') {
       this.classList.remove("invalid");
     } else {
-      // Add the invalid class if the field is empty
       this.classList.add("invalid");
     }
   });

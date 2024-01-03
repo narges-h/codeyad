@@ -20,6 +20,7 @@
             <div id="fullnames">
                 <label for="fullname">نام کاربری</label><br>
                 <input type="text" id="fullname" name="fullname" placeholder="aliAsadi" title="فقط حروف مجاز است">
+                <span  id="fullnameError" class="error-massage"></span>
             </div>
 
 
@@ -27,12 +28,14 @@
                 <label for="nationalCode">کد ملی</label><br>
                 <input type="text" id="nationalCode" name="nationalCode" placeholder="**********"
                     title="لطفا یک کد ملی معتبر وارد کنید">
+                <span  id="nationalCodeError" class="error-massage"></span>
             </div>
 
             <div id="email">
                 <label for="emaill">ایمیل</label><br>
                 <input type="text" id="emailuser" placeholder="name@example.com"
                     title="لطفا ایمیل معتبر وارد کنید">
+                <span  id="emailError" class="error-massage"></span>
             </div>
 
 
@@ -40,6 +43,7 @@
                 <label for="passwordd">رمز عبور</label>
                 <input type="password" id="pass" placeholder="******"
                     title="لطفا یک رمز عبور معتبر وارد کنید.(شامل حرف بزرگ،کوچک،عدد و عبارات خاص(@#&) و از 8 یا بیشتر کرکتر باشد)">
+                <span  id="passwordError" class="error-massage"></span>
 
             </div>
 
@@ -47,6 +51,7 @@
                 <label for="password-reapet">شماره تلفن</label>
                 <input type="tel" id="phoneNumbers" placeholder="******"
                     title="لطفاً یک شماره تلفن معتبر (11 رقم که با 0 شروع می شود) وارد کنید">
+                <span  id="phoneNumbersError" class="error-massage"></span>
             </div>
 
 
@@ -78,7 +83,6 @@
 
             <p id="sabt" &nbsp>قبلا ثبت نام کرده اید؟<a href="login.html" id="vorodhesab">ورود به حساب</a></p>
 
-            <div id="error-massage"></div>
         </form>
     </div>
     <script src="./SignUp.js"></script>
